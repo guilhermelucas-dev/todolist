@@ -1,0 +1,56 @@
+main {
+  max-width: 70.4rem;
+  margin: 0 auto;
+}
+
+.wrapperInfoWork {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.5rem;
+  font-size: 1.4rem;
+}
+
+.infoCreate {
+ color: var(--blue);
+}
+
+.infoConclui {
+  color: var(--purple);
+}
+
+.infoResult {
+  padding: .2rem .8rem;
+  border-radius: 99.9rem;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: .8rem;
+}
+
+.todoListEmpyt {
+  display: flex;
+  /*display: none;*/
+  margin-top: 2.4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 6.4rem 2.4rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: .8rem;
+
+ > img {
+  width: 5.6rem;
+  height: 5.6rem;
+ }
+}
+
+.wrapperEmpytList {
+  color: var(--gray-300);
+  line-height: 2.2rem;
+}
+
+.todoList ul {
+  list-style: none;
+}
+

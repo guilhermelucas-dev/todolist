@@ -1,0 +1,87 @@
+.listItem {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  > .wrapperChecked {
+    position: relative;
+  }
+
+  > .wrapperChecked label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 300ms ease,
+    colour 300ms ease, box-shadow 300ms ease;
+  }
+
+  > .wrapperChecked label:hover {
+    border: 2px solid var(--blue-dark);
+    background-color: var(--blue-dark-opaciy);
+  }
+
+  > .wrapperChecked label:after {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: 33%;
+    width: 29%;
+    height: 14%;
+    opacity: 0;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: opacity 300ms ease;
+  }
+
+  > .wrapperChecked input {
+    visibility: hidden;
+  }
+
+  > .wrapperChecked input:checked + label {
+    background-color: var(--purple);
+    border-color: var(--purple-dark);
+    box-shadow:  0 5px 7px rgba(0, 0, 0, 0.4);
+  }
+
+  > .wrapperChecked input:checked + label:after {
+    opacity: 1;
+  }
+
+  .wrapperChecked:nth-child(1) input:checked + label {
+    background-color: var(--purple-dark);
+    border-color: var(--purple-dark);
+  } 
+
+  .wrapperChecked:nth-child(1) input:checked + label:hover {
+    background-color: var(--purple);
+    border-color: var(--purple);
+  } 
+
+  > button {
+    padding: .5rem .52rem .5rem .6rem;
+    background-color: transparent;
+    color: var(--gray-300);
+    border: none;
+    line-height: 0;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+
+  > button:hover {
+    color: var(--danger);
+    background-color: var(--gray-400);
+  }
+
+}
